@@ -102,3 +102,20 @@ if (high_income or good_credit) and not student:
     print("eligible")
 else:
     print("not eligible")
+
+
+## Short circuit evaluation
+high_income_one = True
+good_credit_one = True
+student_one = True
+
+# one thing to note about the boolean operators is that they are short circuit.
+# the python interpreter goes through all these arguments to see that they are true,
+# however if one of the arguments are false, the evaluation stops.
+# for instance if we change high_income_one to false, when the interpreter evaluates
+# the args and the first one is false,the result of the entire expression is false.
+if high_income_one and good_credit_one and not student_one:
+    print("eligible")
+
+# similarly for the or operator, the evalution of thes arguments stop when
+# one of the arguments is true.
