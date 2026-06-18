@@ -68,3 +68,37 @@ print(message)
 # we can write the above code in a more concise way using ternary operators.
 message = "eligible" if age >= 18 else "not eligible"
 print(message)
+
+
+## Logical Operators
+# in python we have 3 different logical operators: and, or, not.
+
+# imagine we are building an application for processing loans
+high_income = False
+good_credit = True
+student = False
+
+if high_income and good_credit:
+    print("eligible")
+else:
+    print("not eligible")
+
+# in the and operator, if both conditions are true, then the result is true.
+# in contrast for the or operator, if at least one of the conditions is true, the
+# result will return true.
+if high_income or good_credit:
+    print("eligible")
+else:
+    print("not eligible")
+
+# now we will look at the not operator
+# the not operator negates / inverses the result of a boolean expression.
+if not student:
+    print("eligible")
+else:
+    print("not eligible")
+
+if (high_income or good_credit) and not student:
+    print("eligible")
+else:
+    print("not eligible")
