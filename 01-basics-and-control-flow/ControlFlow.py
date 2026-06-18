@@ -56,3 +56,15 @@ print("done.")
 # at first when we were writing the if statement the indentation was only 2 spaces
 # but after we write our code and save it, the indentation increased to 4 spaces
 # because that is what pep 8 reccomends. pep 8 is a style guide for python code.
+
+## Ternary operators
+age = 22
+if age >= 18:
+    message = "eligible"
+else:
+    message = "not eligible"
+print(message)
+
+# we can write the above code in a more concise way using ternary operators.
+message = "eligible" if age >= 18 else "not eligible"
+print(message)
