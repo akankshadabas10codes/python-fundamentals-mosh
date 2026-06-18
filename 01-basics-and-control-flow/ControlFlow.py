@@ -119,3 +119,13 @@ if high_income_one and good_credit_one and not student_one:
 
 # similarly for the or operator, the evalution of thes arguments stop when
 # one of the arguments is true.
+
+
+## chaining comparison operators
+# lets say we want to implement a rule that saya age should be between 18 and 65.
+age = 22
+# if age >= 18 and age < 65:
+if 18 <= age < 65:
+    print("Eligible")
+
+# usually in math we cna write 18 <= age < 65
