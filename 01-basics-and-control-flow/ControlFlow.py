@@ -129,3 +129,118 @@ if 18 <= age < 65:
     print("Eligible")
 
 # usually in math we cna write 18 <= age < 65
+
+
+# Quiz questions
+if 10 == "10":
+    print("a")
+elif "bag" > "apple" and "bag" > "cat":
+    print("b")
+else:
+    print("c")
+
+# we would see c printed when we run this program.
+# the first statement is false because 10 != "10" because they are both of different types.
+# "bag" > "apple" is true because when we sort these words, bag comes after apple.
+# "bag" > "cat" is false because bag comes before cat. Therefore since one of the statements
+# is false, then the whole statement becomes false.
+
+
+## For Loops
+print("Sending a message")
+# we use loops to create repetition
+# lets say we want to call this statement 3 times
+# we call the built in functions range and pass the argument as 3.
+for number in range(3):
+    print("Attempt")
+# number is a variable of type integer.
+# now if we add number in the print statement, we get a for loop where each iteration shows the message
+# and the number of iteration it is at.
+for number in range(3):
+    print("Attempt", number)
+# we can make this more meaningful / userfriendsly by adding number + 1
+for number in range(3):
+    print("Attempt", number + 1)
+
+# we can make this cool effect as well
+for number in range(3):
+    print("Attempt", number + 1, (number + 1) * ".")
+# we can also change the range to be from 1, 4 so we dont have to add number + 1,
+# because now number willstart with 1.
+for number in range(1, 4):
+    print("Attempt", number, number * ".")
+
+# we can add a third argument as a step
+for number in range(1, 10, 2):
+    print("Attempt", number, number * ".")
+
+## For else
+
+# consider that we were succesfully able to print the message.
+# now we want to jump out of this loop.
+
+# successful starts as False, so the task has not succeeded yet.
+# The loop runs 3 times because range(3) gives 0, 1, and 2.
+# Each time, it prints "attempt".
+# Since successful is False, the if statement never runs and break never happens.
+# Because the loop finishes without break, the else block runs at the end.
+successful = False
+for number in range(3):
+    print("attempt")
+    if successful:
+        print("Sucessful")
+        break
+else:
+    print("attempted 3 times and failed.")
+
+
+## Nested Loops
+# outer loop
+for x in range(5):
+    # inner loop
+    for y in range(3):
+        print(f"({x}, {y})")
+
+## Iterables
+print(type(5))
+# range is an example of those complex types from python's primitive types.
+print(type(range(5)))
+# this range object is iterable which means we can iterate over it and use it in a for loop.
+# strings and list are also iterable
+for x in "Python":
+    print(x)
+
+for x in [1, 2, 3, 4]:
+    print(x)
+
+
+## While loops
+# we use this loop to repeat somethign as a long as a condition is true.
+# in this case we are evaluating a conditiona and then repeating a task
+number = 100
+while number > 0:
+    print(number)
+    number //= 2
+
+command = ""
+while command.lower() != "quit":
+    command = input(">")
+    print("ECHO", command)
+
+## Infinite Loops
+# a loop that runs forever
+while True:
+    command = input(">")
+    print("ECHO", command)
+    if command.lower() == "quit":
+        break
+# this code above shows that this will run forever
+# so to jump out of this we need a break statement
+
+## Exercise
+count = 0
+for number in range(1, 10):
+    if number % 2 == 0:
+        count += 1
+        print(number)
+print(f"We have {count} even numbers.")
