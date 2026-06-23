@@ -111,3 +111,62 @@ def increment(number, by=1):
 
 
 print(increment(2))
+
+
+def multiply(*numbers):
+    total = 1
+    for number in numbers:
+        total *= number
+    return total
+
+
+print(multiply(2, 3, 4, 5))
+
+
+# ** args
+# we are going to use this function to save information about the user
+def save_user(**user):
+    print(user["name"])
+
+
+# with this we get key value pairs
+# the object that we get once this is printed out is known as a dictionary.
+save_user(id=1, name="John", age=22)
+
+
+# Debugging
+# *numbers means that the function cna accept any number of arguments
+# python collects those arguemnts into a tuple called numbers.
+# total = 1, we start at 1 becasue multiplying by 1 does not chnage a number
+# total = 1
+# total = 1 * 2 = 2
+# total = 2 * 3 = 6
+# and so on.. and then we return total whcih is the final result
+def multiple(*numbers):
+    total = 1
+    for number in numbers:
+        total *= number
+        return total
+
+
+print("Start")
+print(multiple(1, 2, 3))
+
+## shortcuts using mac
+# to go to the extreme right or left we press fn and the right or left arrows
+# similarly we can press fn and arrow up or down to either go to the extreme top or extreme bottom
+## if we want to select a text and move it up or down we cna press down the option key and then up / down arrows
+# we can comment and uncomment lines using command + /
+
+
+### Exercise
+# common interview question
+# if the input we enter is divisible by 3 then it returns fizz
+# if the input is divisible by 5 then it returns buzz
+# if the input is divsible by both 3 and 5 then it will return fizz buzz
+def fizz_buzz(input):
+    if input % 3 == 0:
+        result = "Fizz"
+
+
+print(fizz_buzz(3))
