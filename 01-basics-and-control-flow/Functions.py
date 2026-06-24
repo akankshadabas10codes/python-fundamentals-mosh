@@ -167,6 +167,35 @@ print(multiple(1, 2, 3))
 def fizz_buzz(input):
     if input % 3 == 0:
         result = "Fizz"
+        # return "Fizz"
+    else:
+        result = "Buzz"
+        # return "Buzz"
+    return result
+    # no return statement here for the return ones
 
 
 print(fizz_buzz(3))
+
+
+# another way to do this
+# if the input is divsible by both 3 and 5 then it will return fizz buzz
+def fizz_buzz(input):
+    if input % 3 == 0:
+        result = "Fizz"
+    return "Buzz"
+    # no return statement here for the return ones
+
+
+def fizz_buzz(input):
+    if (input % 3 == 0) and (input % 5 == 0):
+        return "FizzBuzz"
+    if input % 3 == 0:
+        return "Fizz"
+    if input % 5 == 0:
+        return "Buzz"
+    return input
+    # no return statement here for the return ones
+
+
+print(fizz_buzz(15))
