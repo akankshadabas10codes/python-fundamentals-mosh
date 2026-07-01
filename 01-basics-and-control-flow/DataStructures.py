@@ -48,3 +48,17 @@ first, *other, last = numbers
 print(first)
 print(last)
 print(other)
+
+## looping over lists
+letters = ["a", "b", "c"]
+items = [0, "a"]
+for letter in letters:
+    print(letter)
+
+# what if we want to get the index of each item in the list?
+# we have a built in function called enumerate.
+# this returns an enumerate object which is iterable. in each iteration,
+# this object will return a tuple.
+# a tuple is like a list but its read only, we cant change or add new items to it.
+for letter in enumerate(letters):
+    print(letter[0], letter[1])
