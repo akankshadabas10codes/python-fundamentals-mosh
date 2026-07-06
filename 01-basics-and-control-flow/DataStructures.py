@@ -191,3 +191,29 @@ x = filter(lambda item: item[1] >= 10, items)
 
 filtered_list = list(filter(lambda item: item[1] >= 10, items))
 print(filtered_list)
+
+## list comprehension
+items = [("Product1", 10), ("Product2", 9), ("Product3", 12)]
+
+prices = list(map(lambda item: item[1], items))
+# we are iterating over each item in the iterable and then we are applying this expresiion
+# [expression for item in items]
+prices = [item[1] for item in items]
+
+filtered_list = list(filter(lambda item: item[1] >= 10, items))
+filtered_list = [item for item in items if item[1] >= 10]
+
+
+## Zip function
+list1 = [1, 2, 3]
+list2 = [10, 20, 30]
+
+# lets say we want to combine these 2 lists into a single list of  tuples like this
+# [(1, 10), (2, 20), (3, 30)]
+# we cant use a map function or list comprehension becaus eboth of hese work with a single list
+# but here we are combining multiple lists, and therefore we will use the built in zip function
+# which takes in multiple iterables
+# it will returna zip object which is iterable, so we will use a list funciton
+print(list(zip(list1, list2)))
+# since zip takes in multiple iterables we can also pass in a string like
+print(list(zip("abc", list1, list2)))
