@@ -18,3 +18,4 @@ print("redirect", browsing_session[-1])
 if not browsing_session:
     browsing_session[-1]
     print("disable back button")
+
